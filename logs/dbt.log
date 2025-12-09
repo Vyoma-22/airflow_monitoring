@@ -1,0 +1,244 @@
+[0m18:20:37.231795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10614c980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075a3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1075a3b10>]}
+
+
+============================== 18:20:37.233923 | 14e7960f-b50d-4007-a183-64c50124a34e ==============================
+[0m18:20:37.233923 [info ] [MainThread]: Running with dbt=1.11.0-rc2
+[0m18:20:37.234194 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'no_print': 'None', 'profiles_dir': '/Users/vyoma/.dbt', 'empty': 'None', 'printer_width': '80', 'debug': 'False', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'quiet': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'partial_parse': 'True', 'static_parser': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'invocation_command': 'dbt init', 'write_json': 'True', 'log_path': 'logs'}
+[0m18:20:37.243373 [info ] [MainThread]: Creating dbt configuration folder at /Users/vyoma/.dbt
+[0m18:21:07.448350 [debug] [MainThread]: Starter project path: /Users/vyoma/Documents/projects/airflow_monitoring/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m18:21:07.457538 [info ] [MainThread]: 
+Your new dbt project "airflow_monitoring" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:21:07.458284 [info ] [MainThread]: Setting up your profile.
+[0m18:22:19.199445 [info ] [MainThread]: Profile airflow_monitoring written to /Users/vyoma/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:22:19.218188 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 102.01521, "process_in_blocks": "0", "process_kernel_time": 0.276706, "process_mem_max_rss": "361873408", "process_out_blocks": "0", "process_user_time": 1.177637}
+[0m18:22:19.219304 [debug] [MainThread]: Command `dbt init` succeeded at 18:22:19.219179 after 102.02 seconds
+[0m18:22:19.219597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136d0fe10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136dcc290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136cc3680>]}
+[0m18:22:19.219863 [debug] [MainThread]: Flushing usage events
+[0m18:22:19.459187 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:27:37.805496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106584980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074abc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1074abb10>]}
+
+
+============================== 18:27:37.807716 | 9741211c-ad5d-480f-b093-49176924e9c2 ==============================
+[0m18:27:37.807716 [info ] [MainThread]: Running with dbt=1.11.0-rc2
+[0m18:27:37.807966 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'write_json': 'True', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'printer_width': '80', 'cache_selected_only': 'False', 'target_path': 'None', 'profiles_dir': '/Users/vyoma/.dbt', 'debug': 'False', 'invocation_command': 'dbt debug', 'log_cache_events': 'False', 'introspect': 'True', 'warn_error': 'None', 'quiet': 'False', 'use_colors': 'True', 'no_print': 'None'}
+[0m18:27:37.814546 [info ] [MainThread]: dbt version: 1.11.0-rc2
+[0m18:27:37.814724 [info ] [MainThread]: python version: 3.13.3
+[0m18:27:37.814825 [info ] [MainThread]: python path: /Users/vyoma/Documents/projects/airflow_monitoring/.venv/bin/python
+[0m18:27:37.814916 [info ] [MainThread]: os info: macOS-15.6.1-arm64-arm-64bit-Mach-O
+[0m18:27:39.004955 [info ] [MainThread]: Using profiles dir at /Users/vyoma/.dbt
+[0m18:27:39.005176 [info ] [MainThread]: Using profiles.yml file at /Users/vyoma/.dbt/profiles.yml
+[0m18:27:39.005302 [info ] [MainThread]: Using dbt_project.yml file at /Users/vyoma/Documents/projects/airflow_monitoring/dbt_project.yml
+[0m18:27:39.005410 [info ] [MainThread]: adapter type: bigquery
+[0m18:27:39.005503 [info ] [MainThread]: adapter version: 1.10.3
+[0m18:27:39.005608 [info ] [MainThread]: Configuration:
+[0m18:27:39.005697 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m18:27:39.005789 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:27:39.005878 [info ] [MainThread]: Required dependencies:
+[0m18:27:39.006003 [debug] [MainThread]: Executing "git --help"
+[0m18:27:39.021023 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m18:27:39.021442 [debug] [MainThread]: STDERR: "b''"
+[0m18:27:39.021659 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m18:27:39.021997 [info ] [MainThread]: Connection:
+[0m18:27:39.022195 [info ] [MainThread]:   method: oauth
+[0m18:27:39.022311 [info ] [MainThread]:   database: cool-device-477720-k7
+[0m18:27:39.022404 [info ] [MainThread]:   execution_project: cool-device-477720-k7
+[0m18:27:39.022494 [info ] [MainThread]:   schema: transaction
+[0m18:27:39.022578 [info ] [MainThread]:   location: US
+[0m18:27:39.022661 [info ] [MainThread]:   priority: interactive
+[0m18:27:39.022747 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m18:27:39.022827 [info ] [MainThread]:   impersonate_service_account: None
+[0m18:27:39.022910 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m18:27:39.022991 [info ] [MainThread]:   job_retries: 1
+[0m18:27:39.023073 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m18:27:39.023162 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m18:27:39.023243 [info ] [MainThread]:   timeout_seconds: 300
+[0m18:27:39.023327 [info ] [MainThread]:   client_id: None
+[0m18:27:39.023410 [info ] [MainThread]:   token_uri: None
+[0m18:27:39.023493 [info ] [MainThread]:   compute_region: None
+[0m18:27:39.023575 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m18:27:39.023656 [info ] [MainThread]:   gcs_bucket: None
+[0m18:27:39.023738 [info ] [MainThread]:   dataproc_batch: None
+[0m18:27:39.024000 [info ] [MainThread]: Registered adapter: bigquery=1.10.3
+[0m18:27:39.118832 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m18:27:39.119132 [debug] [MainThread]: On debug: select 1 as id
+[0m18:27:39.119275 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:27:40.915891 [error] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=cool-device-477720-k7&j=bq:US:7cbcf16e-b08e-48be-adb3-778cd8a0a359&page=queryresults
+[0m18:27:40.922033 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m18:27:40.922673 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m18:27:40.923025 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/vyoma/Documents/projects/airflow_monitoring/dbt_project.yml> not found
+
+[0m18:27:40.923314 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  Access Denied: Project cool-device-477720-k7: User does not have bigquery.jobs.create permission in project cool-device-477720-k7.
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m18:27:40.931301 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 3.152076, "process_in_blocks": "0", "process_kernel_time": 0.297848, "process_mem_max_rss": "366919680", "process_out_blocks": "0", "process_user_time": 1.234763}
+[0m18:27:40.932021 [debug] [MainThread]: Command `dbt debug` failed at 18:27:40.931886 after 3.15 seconds
+[0m18:27:40.932478 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m18:27:40.932855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13a6db6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13a8295b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13a5bfce0>]}
+[0m18:27:40.933571 [debug] [MainThread]: Flushing usage events
+[0m18:27:41.111974 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:00:10.162340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087d8980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096ffc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1096ffb10>]}
+
+
+============================== 17:00:10.164650 | bc127896-f7ec-4f1b-8caa-da6102fff794 ==============================
+[0m17:00:10.164650 [info ] [MainThread]: Running with dbt=1.11.0-rc2
+[0m17:00:10.164900 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'quiet': 'False', 'cache_selected_only': 'False', 'introspect': 'True', 'write_json': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'log_format': 'default', 'invocation_command': 'dbt init dbt', 'target_path': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'profiles_dir': '/Users/vyoma/.dbt', 'fail_fast': 'False', 'empty': 'None', 'static_parser': 'True'}
+[0m17:00:58.686617 [debug] [MainThread]: Starter project path: /Users/vyoma/Documents/projects/airflow_monitoring/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m17:00:58.690130 [info ] [MainThread]: 
+Your new dbt project "airflow_monitoring_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:00:58.690306 [info ] [MainThread]: Setting up your profile.
+[0m17:17:08.129253 [info ] [MainThread]: Profile airflow_monitoring_dbt written to /Users/vyoma/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:17:08.137199 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 1017.99457, "process_in_blocks": "0", "process_kernel_time": 0.255493, "process_mem_max_rss": "361283584", "process_out_blocks": "0", "process_user_time": 1.184111}
+[0m17:17:08.139081 [debug] [MainThread]: Command `dbt init` succeeded at 17:17:08.138837 after 1018.00 seconds
+[0m17:17:08.139755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d80fce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d8cc290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d7c3680>]}
+[0m17:17:08.140350 [debug] [MainThread]: Flushing usage events
+[0m17:17:08.335517 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:18:29.353343 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10438c980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052b3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1052b3b10>]}
+
+
+============================== 17:18:29.355455 | c11195bb-b2c5-4b75-8786-7fdcb52191ea ==============================
+[0m17:18:29.355455 [info ] [MainThread]: Running with dbt=1.11.0-rc2
+[0m17:18:29.355694 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'empty': 'None', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init dbt', 'use_colors': 'True', 'printer_width': '80', 'static_parser': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/Users/vyoma/.dbt', 'log_format': 'default', 'introspect': 'True', 'log_cache_events': 'False', 'version_check': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'warn_error': 'None', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs'}
+[0m17:18:39.067306 [debug] [MainThread]: Starter project path: /Users/vyoma/Documents/projects/airflow_monitoring/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m17:18:39.077399 [info ] [MainThread]: 
+Your new dbt project "airflow_monitoring_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:18:39.078370 [info ] [MainThread]: Setting up your profile.
+[0m17:21:31.968383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108498980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093bfc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1093bfb10>]}
+
+
+============================== 17:21:31.970463 | 45ddd1c6-569b-442e-9ac3-a2502378150d ==============================
+[0m17:21:31.970463 [info ] [MainThread]: Running with dbt=1.11.0-rc2
+[0m17:21:31.970693 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'target_path': 'None', 'introspect': 'True', 'log_path': 'logs', 'warn_error': 'None', 'no_print': 'None', 'printer_width': '80', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'write_json': 'True', 'invocation_command': 'dbt init airflow_monitoring_dbt', 'indirect_selection': 'eager', 'version_check': 'True', 'empty': 'None', 'partial_parse': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'profiles_dir': '/Users/vyoma/.dbt', 'use_experimental_parser': 'False', 'debug': 'False'}
+[0m17:21:31.977366 [info ] [MainThread]: A project called airflow_monitoring_dbt already exists here.
+[0m17:21:31.979001 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.03802504, "process_in_blocks": "0", "process_kernel_time": 0.070063, "process_mem_max_rss": "105283584", "process_out_blocks": "0", "process_user_time": 0.460825}
+[0m17:21:31.979250 [debug] [MainThread]: Command `dbt init` succeeded at 17:21:31.979205 after 0.04 seconds
+[0m17:21:31.979410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109405a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1094b1250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109478160>]}
+[0m17:21:31.979562 [debug] [MainThread]: Flushing usage events
+[0m17:21:32.170666 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:21:45.121255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10738c980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108aa3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108aa3b10>]}
+
+
+============================== 17:21:45.123290 | f36a9463-0078-4e10-b5af-63c943c87a22 ==============================
+[0m17:21:45.123290 [info ] [MainThread]: Running with dbt=1.11.0-rc2
+[0m17:21:45.123516 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'log_format': 'default', 'target_path': 'None', 'indirect_selection': 'eager', 'warn_error': 'None', 'use_experimental_parser': 'False', 'introspect': 'True', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init airflow_monitoring_dbt', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/vyoma/.dbt', 'debug': 'False', 'write_json': 'True'}
+[0m17:21:45.129611 [debug] [MainThread]: Starter project path: /Users/vyoma/Documents/projects/airflow_monitoring/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m17:21:45.132863 [info ] [MainThread]: 
+Your new dbt project "airflow_monitoring_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:21:45.133079 [info ] [MainThread]: Setting up your profile.
+[0m17:22:23.240580 [info ] [MainThread]: Profile airflow_monitoring_dbt written to /Users/vyoma/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:22:23.247693 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 38.153034, "process_in_blocks": "0", "process_kernel_time": 0.225689, "process_mem_max_rss": "360890368", "process_out_blocks": "0", "process_user_time": 1.178056}
+[0m17:22:23.249321 [debug] [MainThread]: Command `dbt init` succeeded at 17:22:23.249098 after 38.16 seconds
+[0m17:22:23.249897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x156fefe10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1571cc290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x156fc3680>]}
+[0m17:22:23.250375 [debug] [MainThread]: Flushing usage events
+[0m17:22:23.383763 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:50:20.179751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10494c980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060a3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060a3b10>]}
+
+
+============================== 17:50:20.181918 | 3216b10e-815a-481c-b32a-471f7827ee16 ==============================
+[0m17:50:20.181918 [info ] [MainThread]: Running with dbt=1.11.0-rc2
+[0m17:50:20.182178 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'no_print': 'None', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'static_parser': 'True', 'log_path': 'logs', 'log_cache_events': 'False', 'version_check': 'True', 'fail_fast': 'False', 'cache_selected_only': 'False', 'write_json': 'True', 'target_path': 'None', 'invocation_command': 'dbt seed', 'debug': 'False', 'use_colors': 'True', 'profiles_dir': '/Users/vyoma/.dbt', 'partial_parse': 'True', 'printer_width': '80', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'empty': 'None', 'use_experimental_parser': 'False'}
+[0m17:50:20.182400 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/vyoma/Documents/projects/airflow_monitoring/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:50:20.183817 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.03171879, "process_in_blocks": "0", "process_kernel_time": 0.077545, "process_mem_max_rss": "105349120", "process_out_blocks": "0", "process_user_time": 0.463448}
+[0m17:50:20.184004 [debug] [MainThread]: Command `dbt seed` failed at 17:50:20.183968 after 0.03 seconds
+[0m17:50:20.184123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1060e9940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10610d250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106158160>]}
+[0m17:50:20.184248 [debug] [MainThread]: Flushing usage events
+[0m17:50:20.398823 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:53:42.645976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106238980>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10715fc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10715fb10>]}
+
+
+============================== 17:53:42.648068 | 8f356afc-9070-4d8e-a914-5d1d60918509 ==============================
+[0m17:53:42.648068 [info ] [MainThread]: Running with dbt=1.11.0-rc2
+[0m17:53:42.648309 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'invocation_command': 'dbt init airflow_monitoring_dbt', 'target_path': 'None', 'static_parser': 'True', 'warn_error': 'None', 'log_path': 'logs', 'indirect_selection': 'eager', 'profiles_dir': '/Users/vyoma/.dbt', 'quiet': 'False', 'version_check': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'log_format': 'default', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'no_print': 'None', 'empty': 'None', 'printer_width': '80'}
+[0m17:53:42.655439 [debug] [MainThread]: Starter project path: /Users/vyoma/Documents/projects/airflow_monitoring/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m17:53:42.658499 [info ] [MainThread]: 
+Your new dbt project "airflow_monitoring_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:53:42.658681 [info ] [MainThread]: Setting up your profile.
+[0m17:54:25.947413 [info ] [MainThread]: Profile airflow_monitoring_dbt written to /Users/vyoma/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:54:25.954709 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 43.335255, "process_in_blocks": "0", "process_kernel_time": 0.250075, "process_mem_max_rss": "360808448", "process_out_blocks": "0", "process_user_time": 1.180104}
+[0m17:54:25.956580 [debug] [MainThread]: Command `dbt init` succeeded at 17:54:25.956379 after 43.34 seconds
+[0m17:54:25.957081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136befe10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136cbc290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x136bc3680>]}
+[0m17:54:25.957502 [debug] [MainThread]: Flushing usage events
+[0m17:54:26.137193 [debug] [MainThread]: An error was encountered while trying to flush usage events
