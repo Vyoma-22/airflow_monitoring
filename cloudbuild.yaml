@@ -1,0 +1,20 @@
+steps:
+  # 1. Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t', 'us-central1-docker.pkg.dev/cool-device-477720-k7/airflow-monitoring-dbt/dbt_airflow_monitoring:latest',
+        '.'
+      ]
+
+  # 2. Push image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'us-central1-docker.pkg.dev/cool-device-477720-k7/airflow-monitoring-dbt/dbt_airflow_monitoring:latest'
+      ]
+
+images:
+  - 'us-central1-docker.pkg.dev/cool-device-477720-k7/airflow-monitoring-dbt/dbt_airflow_monitoring:latest'

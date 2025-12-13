@@ -1,0 +1,61 @@
+# self-healing-agent-workflow.yaml
+main:
+  steps:
+    - initialize:
+        assign:
+          - dag_ids: ${input.dag_ids}
+          - cf_url: "https://YOUR-REGION-YOUR-PROJECT.cloudfunctions.net/agent-executor" # Must be updated on deploy
+    - retry_415pm:
+        call: http.post
+        args:
+          url: ${cf_url}
+          body:
+            dag_ids: ${dag_ids}
+            action: "clear_and_retry"
+          auth:
+            type: OIDC
+        result: retry_result
+        
+    - check_415pm_status:
+        switch:
+          - condition: ${retry_result.body.failed_tasks_count > 0}
+            next: delay_until_10am 
+    - success_exit:
+        return: "Agent completed successfully after 4:15 PM run."
+
+    - delay_until_10am:
+        call: sys.sleep
+        args:
+          seconds: 60000 
+        
+    - retry_10am:
+        call: http.post
+        args:
+          url: ${cf_url}
+          body:
+            dag_ids: ${dag_ids}
+            action: "clear_and_retry"
+            retry_count: 2
+          auth:
+            type: OIDC
+        result: final_retry_result
+
+    - check_10am_status:
+        switch:
+          - condition: ${final_retry_result.body.failed_tasks_count > 0}
+            next: notify_rca 
+
+    - success_exit_10am:
+        return: "Agent completed successfully after 10 AM run."
+
+    - notify_rca:
+        call: http.post
+        args:
+          url: ${cf_url}
+          body:
+            dag_ids: ${dag_ids}
+            action: "final_failure_rca"
+          auth:
+            type: OIDC
+        result: rca_result
+        return: ${rca_result.body}

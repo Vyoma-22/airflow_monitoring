@@ -1,0 +1,18 @@
+[
+  {
+    "model": "customers_detail", 
+    "consumers": ["L1/Core Data Team", "Customer Success"]
+  },
+  {
+    "model": "transactions_detail", 
+    "consumers": ["L1/Core Data Team", "Finance/Risk"]
+  },
+  {
+    "model": "customer_accounts", 
+    "consumers": ["L2/Metrics Team", "Marketing Analytics"]
+  },
+  {
+    "model": "daily_balances", 
+    "consumers": ["L3/Reporting Team", "Executive Dashboard"]
+  }
+]

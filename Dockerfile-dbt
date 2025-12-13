@@ -1,0 +1,16 @@
+# Dockerfile
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y \
+    git build-essential && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir dbt-bigquery
+
+WORKDIR /usr/app/
+COPY airflow_monitoring_dbt/ ./airflow_monitoring_dbt/
+
+RUN dbt deps --project-dir /usr/app/airflow_monitoring_dbt
+
+ENTRYPOINT [""]
+CMD ["dbt", "--help"]

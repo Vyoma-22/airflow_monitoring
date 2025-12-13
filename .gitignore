@@ -1,0 +1,34 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# Airflow
+airflow_monitoring_dbt/logs/
+airflow_monitoring_dbt/__pycache__/
+dags/__pycache__/
+
+# Docker & Cloud Build
+*.log
+.cache/
+tmp/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Test directories
+test/

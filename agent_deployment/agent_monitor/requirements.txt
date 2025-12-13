@@ -1,0 +1,8 @@
+functions-framework==3.*
+requests
+google-auth
+google-auth-transport-requests
+google-cloud-bigquery
+google-cloud-logging
+google-cloud-aiplatform # Gemini/Vertex AI
+google-cloud-storage # NEW: For reading manifest.json and consumer_mapping.json
