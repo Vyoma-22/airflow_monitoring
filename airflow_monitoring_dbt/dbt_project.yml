@@ -34,7 +34,7 @@ vars:
 models:
   airflow_monitoring_dbt:
     customers:
-      +schema: lz_customers_data
+      +schema: customers_data
 
     transactions:
       +schema: transactions_data
