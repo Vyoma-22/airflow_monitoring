@@ -2,7 +2,7 @@ from __future__ import annotations
 import pendulum
 from airflow.models.dag import DAG
 from airflow.datasets import Dataset
-# from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import KubernetesPodOperator
+from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import KubernetesPodOperator
 from airflow.models.variable import Variable
 
 # 1. Datasets
@@ -15,18 +15,24 @@ COMPOSER_BUCKET = Variable.get("COMPOSER_BUCKET").strip('/')
 DBT_PROJECT_PATH = "/usr/app/airflow_monitoring_dbt" # Internal path in Docker image
 
 def get_dbt_kpo_task(task_id: str, model_name: str, dataset_output: Dataset = None):
-    """KPO task running dbt command from inside the image."""
     return KubernetesPodOperator(
         task_id=task_id,
         name=task_id.replace('_', '-'),
         namespace="composer-user-workloads",
         image=DBT_IMAGE_URL,
         cmds=["dbt"],
-        arguments=["run", "--project-dir", DBT_PROJECT_PATH, "--models", model_name],
+        arguments=[
+            "run", 
+            "--project-dir", "/usr/app", 
+            "--profiles-dir", "/usr/app",  # <--- ADD THIS EXPLICITLY
+            "--models", model_name
+        ],
+        env_vars={
+            'GCP_PROJECT': 'cool-device-477720-k7',
+            'DBT_DATASET': 'monitoring_dbt'
+        },
         service_account_name="default", 
         do_xcom_push=False,
-        # NO volumes/mounts needed as dbt code is in the image
-        outlets=[dataset_output] if dataset_output else None
     )
 
 with DAG(
