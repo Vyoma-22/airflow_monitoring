@@ -1,5 +1,6 @@
 # Dockerfile
 FROM python:3.11-slim
+FROM ghcr.io/dbt-labs/dbt-bigquery:1.8.0
 
 RUN apt-get update && apt-get install -y \
     git build-essential && \
@@ -11,6 +12,11 @@ WORKDIR /usr/app/
 COPY airflow_monitoring_dbt/ ./airflow_monitoring_dbt/
 
 RUN dbt deps --project-dir /usr/app/airflow_monitoring_dbt
+
+ENV DBT_PROJECT_DIR=/usr/app/airflow_monitoring_dbt
+ENV DBT_PROFILES_DIR=/usr/app/airflow_monitoring_dbt
+
+WORKDIR /usr/app/airflow_monitoring_dbt
 
 ENTRYPOINT [""]
 CMD ["dbt", "--help"]

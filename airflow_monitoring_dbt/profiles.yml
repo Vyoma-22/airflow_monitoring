@@ -1,0 +1,10 @@
+airflow_monitoring:
+  outputs:
+    prod:
+      type: bigquery
+      method: oauth
+      project: "cool-device-477720-k7"
+      dataset: "lz"
+      threads: 4
+      location: us-central1
+  target: prod

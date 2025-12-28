@@ -23,8 +23,8 @@ def get_dbt_kpo_task(task_id: str, model_name: str, dataset_output: Dataset = No
         cmds=["dbt"],
         arguments=[
             "run", 
-            "--project-dir", "/usr/app", 
-            "--profiles-dir", "/usr/app",  # <--- ADD THIS EXPLICITLY
+            "--project-dir", "/usr/app/airflow_monitoring_dbt", 
+            "--profiles-dir", "/usr/app/airflow_monitoring_dbt",  # <--- ADD THIS EXPLICITLY
             "--models", model_name
         ],
         env_vars={
