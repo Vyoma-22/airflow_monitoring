@@ -10,7 +10,7 @@ with src as (
         branch_id,
         branch_name,
         city
-    from {{ ref('branches') }}
+    from {{ source('lz', 'branches') }}
     where cast(business_effective_date as date) = cast('{{ var("business_date") }}' as date)
 )
 

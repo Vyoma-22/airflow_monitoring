@@ -15,7 +15,7 @@ with src as (
         phone,
         cast(join_date as date) as join_date,
         city
-    from {{ ref('customers') }}
+    from {{ source('lz', 'customers') }}
     where cast(business_effective_date as date) = cast('{{ var("business_date") }}' as date)
 )
 

@@ -16,7 +16,7 @@ with src as (
         merchant,
         city,
         category
-    from {{ ref('transactions') }}
+    from {{ source('lz', 'transactions') }}
     where cast(business_effective_date as date) = cast('{{ var("business_date") }}' as date)
 )
 

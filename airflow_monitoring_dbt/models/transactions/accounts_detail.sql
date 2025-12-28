@@ -14,7 +14,7 @@ with src as (
         status,
         branch_id,
         cast(current_balance as numeric) as current_balance
-    from {{ ref('accounts') }}
+    from {{ source('lz', 'accounts') }}
     where cast(business_effective_date as date) = cast('{{ var("business_date") }}' as date)
 )
 

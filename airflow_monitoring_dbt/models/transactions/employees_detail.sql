@@ -12,7 +12,7 @@ with src as (
         full_name,
         role,
         cast(hire_date as date) as hire_date
-    from {{ ref('employees') }}
+    from {{ source('lz', 'employees') }}
     where cast(business_effective_date as date) = cast('{{ var("business_date") }}' as date)
 )
 

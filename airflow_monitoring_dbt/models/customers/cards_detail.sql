@@ -13,7 +13,7 @@ with src as (
         card_type,
         cast(issued_date as date) as issued_date,
         status
-    from {{ ref('cards') }}
+    from {{ source('lz', 'cards') }}
     where cast(business_effective_date as date) = cast('{{ var("business_date") }}' as date)
 )
 
