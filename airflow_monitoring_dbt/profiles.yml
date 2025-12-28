@@ -1,4 +1,4 @@
-airflow_monitoring:
+airflow_monitoring_dbt:
   outputs:
     prod:
       type: bigquery
