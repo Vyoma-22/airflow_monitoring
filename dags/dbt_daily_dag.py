@@ -2,7 +2,7 @@ from __future__ import annotations
 import pendulum
 from airflow.models.dag import DAG
 from airflow.datasets import Dataset
-from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import KubernetesPodOperator
+# from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import KubernetesPodOperator
 from airflow.models.variable import Variable
 
 # 1. Datasets
