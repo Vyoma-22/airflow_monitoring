@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: lz
+    database: cool-device-477720-k7
+    schema: lz  # The actual dataset where your raw data sits
+    tables:
+      - name: customers
+      - name: transactions
+      - name: accounts
+      - name: cards
+      - name: employees
+      - name: branches
+      # Add all your other landing zone tables here
